@@ -15,6 +15,12 @@ export class ProductComponent implements OnInit{
   constructor(private http: HttpClient) {
     this.productModel=new ProductModel();
        }
+  onBlur_productId(eventData:any){} 
+  input_productId(eventData:any){} 
+  focus_productId(eventData:any){} 
+  onBlur_productname(eventData:any){} 
+  input_productname(eventData:any){} 
+  focus_productname(eventData:any){} 
   ngOnInit(){
   }
  
@@ -22,4 +28,4 @@ export class ProductComponent implements OnInit{
    
 }
 export class ProductModel{
- }
+  productId: string;  productname: string; }
