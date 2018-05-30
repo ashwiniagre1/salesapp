@@ -1,6 +1,6 @@
 /**
  * Created by: MetaMagic
- * Date: 29/05/2018
+ * Date: 30/05/2018
  * Organization: MetaMagic	
  */
 import {Component, OnInit} from '@angular/core';
@@ -21,6 +21,14 @@ export class ProductComponent implements OnInit{
   onBlur_productname(eventData:any){} 
   input_productname(eventData:any){} 
   focus_productname(eventData:any){} 
+  onBlur_productPrice(eventData:any){} 
+  input_productPrice(eventData:any){} 
+  focus_productPrice(eventData:any){} 
+  onBlur_quantity(eventData:any){} 
+  input_quantity(eventData:any){} 
+  focus_quantity(eventData:any){} 
+  onClick_cancelBtn(eventData:any){} 
+  onClick_addBtn(eventData:any){} 
   ngOnInit(){
   }
  
@@ -28,4 +36,4 @@ export class ProductComponent implements OnInit{
    
 }
 export class ProductModel{
-  productId: string;  productname: string; }
+  productId: string;  productname: string;  productPrice: number;  quantity: number; }

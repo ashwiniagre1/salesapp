@@ -1,4 +1,4 @@
-<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+<amexio-card [footer]="true" [header]="true" [show]="true" [height]="70" [header-align]="'left'" [footer-align]="'right'">
     <amexio-header>
         Product Details
     </amexio-header>
@@ -6,13 +6,23 @@
         <amexio-text-input [field-label]="'Product Id'" [(ngModel)]="productModel.productId" name="productModel.productId" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true" (onBlur)="onBlur_productId($event)" (input)="input_productId($event)"
             (focus)="focus_productId($event)">
         </amexio-text-input>
-        <amexio-text-input [field-label]="'Product Details'" [(ngModel)]="productModel.productname" name="productModel.productname" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true" (onBlur)="onBlur_productname($event)"
+        <amexio-text-input [field-label]="'Product '" [(ngModel)]="productModel.productname" name="productModel.productname" [place-holder]="'Enter Product Name'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true" (onBlur)="onBlur_productname($event)"
             (input)="input_productname($event)" (focus)="focus_productname($event)">
         </amexio-text-input>
+        <amexio-number-input [field-label]="'Price'" [(ngModel)]="productModel.productPrice" name="productModel.productPrice" [place-holder]="'Enter Price'" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20" (onBlur)="onBlur_productPrice($event)"
+            (input)="input_productPrice($event)" (focus)="focus_productPrice($event)">
+        </amexio-number-input>
+        <amexio-number-input [field-label]="'Quantity'" [(ngModel)]="productModel.quantity" name="productModel.quantity" [place-holder]="'Enter Quantity'" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20" (onBlur)="onBlur_quantity($event)"
+            (input)="input_quantity($event)" (focus)="focus_quantity($event)">
+        </amexio-number-input>
 
     </amexio-body>
 
     <amexio-action>
+        <amexio-button [label]="'Cancel'" [icon]="'fa fa-times fa 2x'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'cancelBtn'" (onClick)="onClick_cancelBtn($event)">
+        </amexio-button>
+        <amexio-button [label]="'Add'" [icon]="'fa fa-save fa 2x'" [type]="'green'" [tooltip]="'button'" [size]="'default'" [form-bind]="'addBtn'" (onClick)="onClick_addBtn($event)">
+        </amexio-button>
 
     </amexio-action>
 </amexio-card>
